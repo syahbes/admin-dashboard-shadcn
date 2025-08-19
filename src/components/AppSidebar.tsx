@@ -1,4 +1,17 @@
-import { Home, Inbox, Calendar, Search, Settings, User2, ChevronUp, Plus, Projector, ChevronDown } from "lucide-react";
+import {
+    Home,
+    Inbox,
+    Calendar,
+    Search,
+    Settings,
+    User2,
+    ChevronUp,
+    Plus,
+    Projector,
+    ChevronDown,
+    DollarSign,
+    User,
+} from "lucide-react";
 import {
     Sidebar,
     SidebarContent,
@@ -26,6 +39,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { cn } from "@/lib/utils";
 
 const items = [
     {
@@ -39,9 +53,14 @@ const items = [
         icon: Inbox,
     },
     {
-        title: "Cal",
-        url: "#",
-        icon: Calendar,
+        title: "Payments",
+        url: "/payments",
+        icon: DollarSign,
+    },
+    {
+        title: "User",
+        url: "/users/john",
+        icon: User,
     },
     {
         title: "Search",
@@ -82,7 +101,15 @@ export default function AppSidebar() {
                                     <SidebarMenuButton asChild>
                                         <Link href={item.url}>
                                             <item.icon />
-                                            <span>{item.title}</span>
+                                            <span
+                                                className={cn(
+                                                    "font-normal",
+                                                    item.title === "Payments" && "font-bold",
+                                                    item.title === "User" && "font-bold"
+                                                )}
+                                            >
+                                                {item.title}
+                                            </span>
                                         </Link>
                                     </SidebarMenuButton>
                                     {item.title === "Inbox" && <SidebarMenuBadge>24</SidebarMenuBadge>}
@@ -152,40 +179,40 @@ export default function AppSidebar() {
                         </CollapsibleContent>
                     </SidebarGroup>
                 </Collapsible>
-            {/* Nested */}
-            <SidebarGroup>
-                <SidebarGroupLabel>Nested Items</SidebarGroupLabel>
-                <SidebarGroupContent>
-                    <SidebarMenu>
-                        <SidebarMenuItem>
-                            <SidebarMenuButton asChild>
-                                <Link href={"#"}>
-                                    <Projector />
-                                    See All Projects
-                                </Link>
-                            </SidebarMenuButton>
-                            <SidebarMenuSub>
-                                <SidebarMenuSubItem>
-                                    <SidebarMenuSubButton asChild>
-                                        <Link href="/">
-                                            <Plus />
-                                            Add Project
-                                        </Link>
-                                    </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                                <SidebarMenuSubItem>
-                                    <SidebarMenuSubButton asChild>
-                                        <Link href="/">
-                                            <Plus />
-                                            Add Category
-                                        </Link>
-                                    </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                            </SidebarMenuSub>
-                        </SidebarMenuItem>
-                    </SidebarMenu>
-                </SidebarGroupContent>
-            </SidebarGroup>
+                {/* Nested */}
+                <SidebarGroup>
+                    <SidebarGroupLabel>Nested Items</SidebarGroupLabel>
+                    <SidebarGroupContent>
+                        <SidebarMenu>
+                            <SidebarMenuItem>
+                                <SidebarMenuButton asChild>
+                                    <Link href={"#"}>
+                                        <Projector />
+                                        See All Projects
+                                    </Link>
+                                </SidebarMenuButton>
+                                <SidebarMenuSub>
+                                    <SidebarMenuSubItem>
+                                        <SidebarMenuSubButton asChild>
+                                            <Link href="/">
+                                                <Plus />
+                                                Add Project
+                                            </Link>
+                                        </SidebarMenuSubButton>
+                                    </SidebarMenuSubItem>
+                                    <SidebarMenuSubItem>
+                                        <SidebarMenuSubButton asChild>
+                                            <Link href="/">
+                                                <Plus />
+                                                Add Category
+                                            </Link>
+                                        </SidebarMenuSubButton>
+                                    </SidebarMenuSubItem>
+                                </SidebarMenuSub>
+                            </SidebarMenuItem>
+                        </SidebarMenu>
+                    </SidebarGroupContent>
+                </SidebarGroup>
             </SidebarContent>
             <SidebarFooter>
                 <SidebarMenu>
