@@ -32,12 +32,14 @@ const chartData = [
 
 export default function AppAreaChart() {
     return (
-        <div>
+        <div className="flex flex-col h-full">
             <h1 className="text-lg font-medium mb-6">Total Visitors</h1>
-            <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-                <AreaChart accessibilityLayer data={chartData}>
+            <ChartContainer config={chartConfig} className="min-h-[200px] w-full flex-1">
+              
+                <AreaChart accessibilityLayer data={chartData}
+                 >
                     <CartesianGrid vertical={false} />
-                    <YAxis tickLine={false} tickMargin={10} axisLine={false} />
+                    <YAxis tickLine={false} tickMargin={10} axisLine={false} width={35}/>
                     <XAxis
                         dataKey="month"
                         tickLine={false}
