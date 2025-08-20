@@ -58,8 +58,8 @@ const items = [
         icon: DollarSign,
     },
     {
-        title: "User",
-        url: "/users/john",
+        title: "Users",
+        url: "/users",
         icon: User,
     },
     {
@@ -105,7 +105,7 @@ export default function AppSidebar() {
                                                 className={cn(
                                                     "font-normal",
                                                     item.title === "Payments" && "font-bold",
-                                                    item.title === "User" && "font-bold"
+                                                    item.title === "Users" && "font-bold"
                                                 )}
                                             >
                                                 {item.title}
