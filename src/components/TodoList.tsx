@@ -47,7 +47,7 @@ const items = [
     },
 ];
 
-export default function todolist() {
+export default function TodoList() {
     const [date, setDate] = useState<Date | undefined>(new Date());
     const [open, setOpen] = useState(false);
 
