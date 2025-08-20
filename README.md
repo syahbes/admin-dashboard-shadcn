@@ -12,12 +12,14 @@ Responsive design, dark mode, and modern UI components.
 
 ## Live at
 
-https://dashboard-ashen.vercel.app/
+[https://dashboard-ashen.vercel.app/
+](https://admin-dashboard-shadcn-opal.vercel.app)
 
 ## Screenshots
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/30bf098c-b808-4d73-8165-a6fe66b31153" />
+<img width="1918" height="1079" alt="image" src="https://github.com/user-attachments/assets/8bc91422-e558-4419-b950-14470549ec96" />
 
-![Dashboard](https://i.imgur.com/1.png)
-![Dashboard](https://i.imgur.com/2.png)
+
 
 ## Run locally
 
