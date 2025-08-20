@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -48,8 +48,8 @@ const items = [
 ];
 
 export default function todolist() {
-    const [date, setDate] = React.useState<Date | undefined>(new Date());
-    const [open, setOpen] = React.useState(false);
+    const [date, setDate] = useState<Date | undefined>(new Date());
+    const [open, setOpen] = useState(false);
 
     return (
         <div className="">
