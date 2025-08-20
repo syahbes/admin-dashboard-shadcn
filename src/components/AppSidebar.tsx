@@ -48,11 +48,6 @@ const items = [
         icon: Home,
     },
     {
-        title: "Inbox",
-        url: "#",
-        icon: Inbox,
-    },
-    {
         title: "Payments",
         url: "/payments",
         icon: DollarSign,
@@ -112,7 +107,7 @@ export default function AppSidebar() {
                                             </span>
                                         </Link>
                                     </SidebarMenuButton>
-                                    {item.title === "Inbox" && <SidebarMenuBadge>24</SidebarMenuBadge>}
+                                    {item.title === "Payments" && <SidebarMenuBadge>24</SidebarMenuBadge>}
                                 </SidebarMenuItem>
                             ))}
                         </SidebarMenu>
