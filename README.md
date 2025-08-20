@@ -22,13 +22,16 @@ https://dashboard-ashen.vercel.app/
 ## Run locally
 
 ```bash
+# Clone the Respo
+git clone git@github.com:syahbes/admin-dashboard-shadcn.git
+cd admin-dashboard-shadcn
+
 # Install dependencies
 pnpm install
 
 # Run development server
 pnpm run dev
 ```
-
 ## Pages
 
 - Home
